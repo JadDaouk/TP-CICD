@@ -3,7 +3,7 @@
     ]) {
         node(POD_LABEL) {
             container('maven') {
-                git url: 'scm.userRemoteConfigs[0].url', branch: 'scm.branches[0].name.split("/")[1]\n'
+                git url: 'scm.userRemoteConfigs[0].url', branch: 'scm.branches[0].name.split("/")[1]'
                 stage('build') {
                     sh '''
                 mvn clean package -DskipTests
